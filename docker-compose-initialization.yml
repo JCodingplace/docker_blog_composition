@@ -54,7 +54,6 @@ services:
         python manage.py collectstatic --no-input --clear
         python manage.py migrate
         python manage.py init_superuser
-        gunicorn config.wsgi:application --bind 0.0.0.0:8000
 
   reactblog:
     build:
@@ -67,4 +66,4 @@ services:
       - ./../reactblog/reactblog:/reactblog
       - /reactblog/node_modules
     command: >
-      sh -c "npm start"
+      sh -c "npm build"

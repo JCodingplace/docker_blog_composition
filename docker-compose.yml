@@ -61,7 +61,8 @@ services:
   nginx:
     build: ./nginx
     volumes:
-      - ./../djangoblog/djangoblog/static:/static
+      - ./../djangoblog/djangoblog/static:/djangoblog/static
+      - ./../reactblog/reactblog/build:/reactblog/build
     ports:
       - "80:80"
       - "443:443"

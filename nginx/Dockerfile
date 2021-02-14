@@ -1,3 +1,4 @@
 FROM nginx:1.19.0-alpine
 
-COPY ./default.conf /etc/nginx/conf.d/default.conf
+COPY ./django.conf /etc/nginx/conf.d/django.conf
+COPY ./react.conf /etc/nginx/conf.d/react.conf
